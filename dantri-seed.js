@@ -1,0 +1,794 @@
+window.DANTRI_MENU = [{"id":"home","title":"Home","url":"https://dantri.com.vn/","type":"home"},{"id":"dt360","title":"Dân trí 360","url":"https://dantri.com.vn/dt360.htm","type":"external"},{"id":"latest","title":"Mới nhất","url":"https://dantri.com.vn/tin-moi-nhat.htm","type":"category"},{"id":"kinh-doanh","title":"Kinh doanh","url":"https://dantri.com.vn/kinh-doanh.htm","type":"category","children":[{"id":"tai-chinh","title":"Tài chính","url":"https://dantri.com.vn/kinh-doanh/tai-chinh.htm"},{"id":"chung-khoan","title":"Chứng khoán","url":"https://dantri.com.vn/kinh-doanh/chung-khoan.htm"},{"id":"esg-viet-nam","title":"ESG Việt Nam","url":"https://dantri.com.vn/kinh-doanh/esg-viet-nam.htm"}]},{"id":"thoi-su","title":"Thời sự","url":"https://dantri.com.vn/thoi-su.htm","type":"category","children":[{"id":"chinh-tri","title":"Chính trị","url":"https://dantri.com.vn/thoi-su/chinh-tri.htm"},{"id":"hoc-tap-bac","title":"Học tập Bác","url":"https://dantri.com.vn/thoi-su/hoc-tap-bac.htm"},{"id":"moi-truong","title":"Môi trường","url":"https://dantri.com.vn/thoi-su/moi-truong.htm"},{"id":"giao-thong","title":"Giao thông","url":"https://dantri.com.vn/thoi-su/giao-thong.htm"},{"id":"nong-tren-mang","title":"Nóng trên mạng","url":"https://dantri.com.vn/thoi-su/nong-tren-mang.htm"}]},{"id":"suc-khoe","title":"Sức khỏe","url":"https://dantri.com.vn/suc-khoe.htm","type":"category","children":[{"id":"ung-thu","title":"Ung thư","url":"https://dantri.com.vn/suc-khoe/ung-thu.htm"},{"id":"ngoai-than-kinh-cot-song","title":"Ngoại thần kinh - Cột sống","url":"https://dantri.com.vn/suc-khoe/ngoai-than-kinh-cot-song.htm"},{"id":"sinh-san-hiem-muon","title":"Sinh sản - Hiếm muộn","url":"https://dantri.com.vn/suc-khoe/sinh-san-hiem-muon.htm"}]},{"id":"cham-dut-con-dau","title":"Chấm dứt cơn đau","url":"https://dantri.com.vn/cham-dut-con-dau.htm","type":"category","children":[{"id":"dau-co-xuong-khop","title":"Đau cơ xương khớp","url":"https://dantri.com.vn/cham-dut-con-dau/dau-co-xuong-khop.htm"},{"id":"dau-bung","title":"Đau bụng","url":"https://dantri.com.vn/cham-dut-con-dau/dau-bung.htm"},{"id":"dau-than-kinh-dau-dau","title":"Đau thần kinh - đau đầu","url":"https://dantri.com.vn/cham-dut-con-dau/dau-than-kinh-dau-dau.htm"}]},{"id":"bat-dong-san","title":"Bất động sản","url":"https://dantri.com.vn/bat-dong-san.htm","type":"category","children":[{"id":"du-an","title":"Dự án","url":"https://dantri.com.vn/bat-dong-san/du-an.htm"},{"id":"thi-truong","title":"Thị trường","url":"https://dantri.com.vn/bat-dong-san/thi-truong.htm"},{"id":"nhip-song-do-thi","title":"Nhịp sống đô thị","url":"https://dantri.com.vn/bat-dong-san/nhip-song-do-thi.htm"}]},{"id":"doi-song","title":"Đời sống","url":"https://dantri.com.vn/doi-song.htm","type":"category","children":[{"id":"cong-dong","title":"Cộng đồng","url":"https://dantri.com.vn/doi-song/cong-dong.htm"},{"id":"nha-dep","title":"Nhà đẹp","url":"https://dantri.com.vn/doi-song/nha-dep.htm"},{"id":"thuong-luu","title":"Thượng lưu","url":"https://dantri.com.vn/doi-song/thuong-luu.htm"}]},{"id":"the-thao","title":"Thể thao","url":"https://dantri.com.vn/the-thao.htm","type":"category","children":[{"id":"bong-da","title":"Bóng đá","url":"https://dantri.com.vn/the-thao/bong-da.htm"},{"id":"pickleball","title":"Pickleball","url":"https://dantri.com.vn/the-thao/pickleball.htm"},{"id":"tennis","title":"Tennis","url":"https://dantri.com.vn/the-thao/tennis.htm"}]},{"id":"giai-tri","title":"Giải trí","url":"https://dantri.com.vn/giai-tri.htm","type":"category","children":[{"id":"hau-truong","title":"Hậu trường","url":"https://dantri.com.vn/giai-tri/hau-truong.htm"},{"id":"sach-hay","title":"Sách hay","url":"https://dantri.com.vn/giai-tri/sach-hay.htm"},{"id":"dien-anh","title":"Điện ảnh","url":"https://dantri.com.vn/giai-tri/dien-anh.htm"}]},{"id":"noi-vu","title":"Nội vụ","url":"https://dantri.com.vn/noi-vu.htm","type":"category","children":[{"id":"chinh-sach","title":"Chính sách","url":"https://dantri.com.vn/noi-vu/chinh-sach.htm"},{"id":"to-chuc-bo-may","title":"Tổ chức bộ máy","url":"https://dantri.com.vn/noi-vu/to-chuc-bo-may.htm"},{"id":"tien-luong","title":"Tiền lương","url":"https://dantri.com.vn/noi-vu/tien-luong.htm"}]},{"id":"tam-long-nhan-ai","title":"Tấm lòng nhân ái","url":"https://dantri.com.vn/tam-long-nhan-ai.htm","type":"category","children":[{"id":"nhip-cau-nhan-ai","title":"Nhịp cầu nhân ái","url":"https://dantri.com.vn/tam-long-nhan-ai/nhip-cau-nhan-ai.htm"},{"id":"vuot-len-so-phan","title":"Vượt lên số phận","url":"https://dantri.com.vn/tam-long-nhan-ai/vuot-len-so-phan.htm"}]},{"id":"the-gioi","title":"Thế giới","url":"https://dantri.com.vn/the-gioi.htm","type":"category","children":[{"id":"quan-su","title":"Quân sự","url":"https://dantri.com.vn/the-gioi/quan-su.htm"},{"id":"phan-tich","title":"Phân tích - Bình luận","url":"https://dantri.com.vn/the-gioi/phan-tich-binh-luan.htm"},{"id":"the-gioi-do-day","title":"Thế giới đó đây","url":"https://dantri.com.vn/the-gioi/the-gioi-do-day.htm"},{"id":"kieu-bao","title":"Kiều bào","url":"https://dantri.com.vn/the-gioi/kieu-bao.htm"}]},{"id":"du-lich","title":"Du lịch","url":"https://dantri.com.vn/du-lich.htm","type":"category","children":[{"id":"tin-tuc","title":"Tin tức","url":"https://dantri.com.vn/du-lich/tin-tuc.htm"},{"id":"kham-pha","title":"Khám phá","url":"https://dantri.com.vn/du-lich/kham-pha.htm"},{"id":"mon-ngon-diem-dep","title":"Món ngon - Điểm đẹp","url":"https://dantri.com.vn/du-lich/mon-ngon-diem-dep.htm"}]},{"id":"o-to-xe-may","title":"Ô tô - Xe máy","url":"https://dantri.com.vn/o-to-xe-may.htm","type":"category","children":[{"id":"thi-truong-xe","title":"Thị trường xe","url":"https://dantri.com.vn/o-to-xe-may/thi-truong-xe.htm"},{"id":"chon-xe","title":"Chọn xe","url":"https://dantri.com.vn/o-to-xe-may/chon-xe.htm"},{"id":"xe-dien","title":"Xe điện","url":"https://dantri.com.vn/o-to-xe-may/xe-dien.htm"}]},{"id":"giao-duc","title":"Giáo dục - Hướng nghiệp","url":"https://dantri.com.vn/giao-duc.htm","type":"category","children":[{"id":"goc-phu-huynh","title":"Góc phụ huynh","url":"https://dantri.com.vn/giao-duc/goc-phu-huynh.htm"},{"id":"tuyen-sinh","title":"Tuyển sinh","url":"https://dantri.com.vn/giao-duc/tuyen-sinh.htm"},{"id":"tra-cuu-diem","title":"Tra cứu điểm","url":"https://dantri.com.vn/giao-duc/tra-cuu-diem.htm"}]},{"id":"cong-nghe","title":"Công nghệ","url":"https://dantri.com.vn/cong-nghe.htm","type":"category","children":[{"id":"ai-internet","title":"AI & Internet","url":"https://dantri.com.vn/cong-nghe/ai-internet.htm"},{"id":"an-ninh-mang","title":"An ninh mạng","url":"https://dantri.com.vn/cong-nghe/an-ninh-mang.htm"}]},{"id":"lao-dong-viec-lam","title":"Lao động - Việc làm","url":"https://dantri.com.vn/lao-dong-viec-lam.htm","type":"category","children":[{"id":"nhan-luc-moi","title":"Nhân lực mới","url":"https://dantri.com.vn/lao-dong-viec-lam/nhan-luc-moi.htm"},{"id":"lam-giau","title":"Làm giàu","url":"https://dantri.com.vn/lao-dong-viec-lam/lam-giau.htm"},{"id":"an-sinh","title":"An sinh","url":"https://dantri.com.vn/lao-dong-viec-lam/an-sinh.htm"}]},{"id":"phap-luat","title":"Pháp luật","url":"https://dantri.com.vn/phap-luat.htm","type":"category","children":[{"id":"ho-so-vu-an","title":"Hồ sơ vụ án","url":"https://dantri.com.vn/phap-luat/ho-so-vu-an.htm"},{"id":"phap-dinh","title":"Pháp đình","url":"https://dantri.com.vn/phap-luat/phap-dinh.htm"}]},{"id":"tinh-yeu-gioi-tinh","title":"Tình yêu - Giới tính","url":"https://dantri.com.vn/tinh-yeu-gioi-tinh.htm","type":"category","children":[{"id":"gia-dinh","title":"Gia đình","url":"https://dantri.com.vn/tinh-yeu-gioi-tinh/gia-dinh.htm"},{"id":"tinh-yeu","title":"Tình yêu","url":"https://dantri.com.vn/tinh-yeu-gioi-tinh/tinh-yeu.htm"}]},{"id":"khoa-hoc","title":"Khoa học","url":"https://dantri.com.vn/khoa-hoc.htm","type":"category","children":[{"id":"the-gioi-tu-nhien","title":"Thế giới tự nhiên","url":"https://dantri.com.vn/khoa-hoc/the-gioi-tu-nhien.htm"},{"id":"vu-tru","title":"Vũ trụ","url":"https://dantri.com.vn/khoa-hoc/vu-tru.htm"},{"id":"kham-pha","title":"Khám phá","url":"https://dantri.com.vn/khoa-hoc/kham-pha.htm"}]},{"id":"ban-doc","title":"Bạn đọc","url":"https://dantri.com.vn/ban-doc.htm","type":"category","children":[{"id":"ban-doc-noi","title":"Bạn đọc nói","url":"https://dantri.com.vn/ban-doc/ban-doc-noi.htm"},{"id":"tu-van-phap-luat","title":"Tư vấn pháp luật","url":"https://dantri.com.vn/ban-doc/tu-van-phap-luat.htm"},{"id":"hoi-am","title":"Hồi âm","url":"https://dantri.com.vn/ban-doc/hoi-am.htm"}]},{"id":"thoi-tiet","title":"Thời tiết","url":"https://dantri.com.vn/thoi-tiet.htm","type":"category"}];
+window.DANTRI_SEED = {
+  "source": "https://dantri.com.vn",
+  "collectedAt": "2026-10-22T18:42:26+07:00",
+  "categoryCount": 22,
+  "postCount": 49,
+  "posts": [
+    {
+      "id": "dtri-20261022162854552",
+      "title": "Đề xuất thu hồi đất sau 60 tháng, cần làm rõ dự án nào ngoại lệ",
+      "slug": "de-xuat-thu-hoi-dat-sau-60-thang-can-lam-ro-du-an-nao-ngoai-le-20261022162854552",
+      "excerpt": "(Dân trí) - Chuyên gia đánh giá đề xuất thu hồi đất dự án chậm sử dụng quá 60 tháng là hợp lý, song cần phân biệt chủ đầu tư cố tình chậm triển khai với trường hợp vướng mắc pháp lý.",
+      "content": "(Dân trí) - Chuyên gia đánh giá đề xuất thu hồi đất dự án chậm sử dụng quá 60 tháng là hợp lý, song cần phân biệt chủ đầu tư cố tình chậm triển khai với trường hợp vướng mắc pháp lý.",
+      "author": "Dân trí",
+      "category": [
+        "Bất động sản",
+        "Thị trường"
+      ],
+      "publishedAt": "2026-10-22T17:06:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/bat-dong-san/de-xuat-thu-hoi-dat-sau-60-thang-can-lam-ro-du-an-nao-ngoai-le-20261022162854552.htm",
+      "image": "assets/dtri-20261022162854552.jpg"
+    },
+    {
+      "id": "dtri-20261022144951669",
+      "title": "Dự án gần 1.700 tỷ đồng xây dựng nhà ở cho lực lượng CAND ở Phú Thọ",
+      "slug": "du-an-gan-1700-ty-dong-xay-dung-nha-o-cho-luc-luong-cand-o-phu-tho-20261022144951669",
+      "excerpt": "(Dân trí) - Dự án xây dựng nhà ở cho lực lượng Công an nhân dân tại phường Việt Trì (Phú Thọ) có tổng diện tích lập quy hoạch gần 5,36ha, tổng mức đầu tư khoảng 1.695 tỷ đồng, gồm 5 tòa nhà cao 9 tầng.",
+      "content": "(Dân trí) - Dự án xây dựng nhà ở cho lực lượng Công an nhân dân tại phường Việt Trì (Phú Thọ) có tổng diện tích lập quy hoạch gần 5,36ha, tổng mức đầu tư khoảng 1.695 tỷ đồng, gồm 5 tòa nhà cao 9 tầng.",
+      "author": "Dân trí",
+      "category": [
+        "Bất động sản",
+        "Dự án"
+      ],
+      "publishedAt": "2026-10-22T16:10:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/bat-dong-san/du-an-gan-1700-ty-dong-xay-dung-nha-o-cho-luc-luong-cand-o-phu-tho-20261022144951669.htm",
+      "image": "assets/dtri-20261022144951669.jpg"
+    },
+    {
+      "id": "dtri-20261022164909768",
+      "title": "Hà Nội giao hơn 11.400m2 đất tại Đông Anh làm nhà ở cho lực lượng công an",
+      "slug": "ha-noi-giao-hon-11400m2-dat-tai-dong-anh-lam-nha-o-cho-luc-luong-cong-an-20261022164909768",
+      "excerpt": "(Dân trí) - Hà Nội giao hơn 11.400m2 đất tại xã Đông Anh cho hai doanh nghiệp thuộc hệ sinh thái Amaccao để xây dựng nhà ở xã hội cho cán bộ, chiến sĩ công an và nhà ở thương mại.",
+      "content": "(Dân trí) - Hà Nội giao hơn 11.400m2 đất tại xã Đông Anh cho hai doanh nghiệp thuộc hệ sinh thái Amaccao để xây dựng nhà ở xã hội cho cán bộ, chiến sĩ công an và nhà ở thương mại.",
+      "author": "Dân trí",
+      "category": [
+        "Bất động sản",
+        "Dự án"
+      ],
+      "publishedAt": "2026-10-22T16:57:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/bat-dong-san/ha-noi-giao-hon-11400m2-dat-tai-dong-anh-lam-nha-o-cho-luc-luong-cong-an-20261022164909768.htm",
+      "image": "assets/dtri-20261022164909768.jpg"
+    },
+    {
+      "id": "dtri-20261022151323767",
+      "title": "Lãi suất giảm, nhiều khoản vẫn trên 11%/năm, người vay mua nhà chật vật",
+      "slug": "lai-suat-giam-nhieu-khoan-van-tren-11nam-nguoi-vay-mua-nha-chat-vat-20261022151323767",
+      "excerpt": "(Dân trí) - Dù lãi suất đang hạ nhiệt sau chỉ đạo quyết liệt của Chính phủ, Ngân hàng Nhà nước, nhưng nhiều khoản vay vẫn trên 11%/năm. Người vay mua nhà đang tính toán để giảm nợ, chưa vội vay mới...",
+      "content": "(Dân trí) - Dù lãi suất đang hạ nhiệt sau chỉ đạo quyết liệt của Chính phủ, Ngân hàng Nhà nước, nhưng nhiều khoản vay vẫn trên 11%/năm. Người vay mua nhà đang tính toán để giảm nợ, chưa vội vay mới...",
+      "author": "Dân trí",
+      "category": [
+        "Bất động sản",
+        "Thị trường"
+      ],
+      "publishedAt": "2026-10-22T16:20:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/bat-dong-san/lai-suat-giam-nhieu-khoan-van-tren-11nam-nguoi-vay-mua-nha-chat-vat-20261022151323767.htm",
+      "image": "assets/dtri-20261022151323767.jpg"
+    },
+    {
+      "id": "dtri-20261021172135995",
+      "title": "Nhiều công nhân xây dựng khó tiếp cận nhà ở xã hội",
+      "slug": "nhieu-cong-nhan-xay-dung-kho-tiep-can-nha-o-xa-hoi-20261021172135995",
+      "excerpt": "(Dân trí) - Gần một nửa trong 500 công nhân xây dựng được khảo sát chưa tiếp cận thông tin về nhà ở xã hội do hạn chế trong việc nắm quyền lợi, xác định đầu mối hỗ trợ và tìm hiểu thủ tục.",
+      "content": "(Dân trí) - Gần một nửa trong 500 công nhân xây dựng được khảo sát chưa tiếp cận thông tin về nhà ở xã hội do hạn chế trong việc nắm quyền lợi, xác định đầu mối hỗ trợ và tìm hiểu thủ tục.",
+      "author": "Dân trí",
+      "category": [
+        "Bất động sản",
+        "Nhịp sống đô thị"
+      ],
+      "publishedAt": "2026-10-21T17:31:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/bat-dong-san/nhieu-cong-nhan-xay-dung-kho-tiep-can-nha-o-xa-hoi-20261021172135995.htm",
+      "image": "assets/dtri-20261021172135995.jpg"
+    },
+    {
+      "id": "dtri-20261022073313815",
+      "title": "Phát triển Trung tâm tài chính quốc tế Việt Nam tại Đà Nẵng, quy mô 300ha",
+      "slug": "phat-trien-trung-tam-tai-chinh-quoc-te-viet-nam-tai-da-nang-quy-mo-300ha-20261022073313815",
+      "excerpt": "(Dân trí) - Phó Thủ tướng Thường trực Phạm Gia Túc vừa ký Quyết định 2016/QĐ-TTg ngày 21/10 phê duyệt Quy hoạch chung thành phố Đà Nẵng đến năm 2050, tầm nhìn đến năm 2075 (quy hoạch).",
+      "content": "(Dân trí) - Phó Thủ tướng Thường trực Phạm Gia Túc vừa ký Quyết định 2016/QĐ-TTg ngày 21/10 phê duyệt Quy hoạch chung thành phố Đà Nẵng đến năm 2050, tầm nhìn đến năm 2075 (quy hoạch).",
+      "author": "Dân trí",
+      "category": [
+        "Bất động sản",
+        "Dự án"
+      ],
+      "publishedAt": "2026-10-22T07:54:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/bat-dong-san/phat-trien-trung-tam-tai-chinh-quoc-te-viet-nam-tai-da-nang-quy-mo-300ha-20261022073313815.htm",
+      "image": "assets/dtri-20261022073313815.jpg"
+    },
+    {
+      "id": "dtri-20261022092027118",
+      "title": "Thiết kế bồn rửa bếp khiến nhiều người hối hận khi làm nhà",
+      "slug": "thiet-ke-bon-rua-bep-khien-nhieu-nguoi-hoi-han-khi-lam-nha-20261022092027118",
+      "excerpt": "(Dân trí) - Từng được xem là giải pháp tối ưu diện tích cho bàn bếp, bồn rửa hai ngăn hình cánh bướm dần bộc lộ nhiều điểm bất tiện trong sinh hoạt thường nhật của các gia đình.",
+      "content": "(Dân trí) - Từng được xem là giải pháp tối ưu diện tích cho bàn bếp, bồn rửa hai ngăn hình cánh bướm dần bộc lộ nhiều điểm bất tiện trong sinh hoạt thường nhật của các gia đình.",
+      "author": "Dân trí",
+      "category": [
+        "Bất động sản",
+        "Nhịp sống đô thị"
+      ],
+      "publishedAt": "2026-10-22T10:31:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/bat-dong-san/thiet-ke-bon-rua-bep-khien-nhieu-nguoi-hoi-han-khi-lam-nha-20261022092027118.htm",
+      "image": "assets/dtri-20261022092027118.jpg"
+    },
+    {
+      "id": "dtri-20261022174922484",
+      "title": "TPHCM đẩy nhanh cấp sổ hồng, hơn 43.000 căn nhà đã được giải quyết",
+      "slug": "tphcm-day-nhanh-cap-so-hong-hon-43000-can-nha-da-duoc-giai-quyet-20261022174922484",
+      "excerpt": "(Dân trí) - TPHCM đã giải quyết cấp sổ hồng cho 43.200 căn nhà trong dự án, đạt 84% mục tiêu năm nay; 13.949 hồ sơ đang chờ đóng lệ phí trước bạ.",
+      "content": "(Dân trí) - TPHCM đã giải quyết cấp sổ hồng cho 43.200 căn nhà trong dự án, đạt 84% mục tiêu năm nay; 13.949 hồ sơ đang chờ đóng lệ phí trước bạ.",
+      "author": "Dân trí",
+      "category": [
+        "Bất động sản",
+        "Thị trường"
+      ],
+      "publishedAt": "2026-10-22T18:36:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-day-nhanh-cap-so-hong-hon-43000-can-nha-da-duoc-giai-quyet-20261022174922484.htm",
+      "image": "assets/dtri-20261022174922484.jpg"
+    },
+    {
+      "id": "dtri-20261022124431968",
+      "title": "TPHCM sôi động mùa concert, ngành kinh doanh nào đang hưởng lợi?",
+      "slug": "tphcm-soi-dong-mua-concert-nganh-kinh-doanh-nao-dang-huong-loi-20261022124431968",
+      "excerpt": "(Dân trí) - Theo dữ liệu Trip.com, lượng đặt phòng khách sạn tại TPHCM cho hai đêm 16-17/10, thời gian diễn ra các chương trình nghệ thuật lớn, tăng hơn 7 lần so với bình thường.",
+      "content": "(Dân trí) - Theo dữ liệu Trip.com, lượng đặt phòng khách sạn tại TPHCM cho hai đêm 16-17/10, thời gian diễn ra các chương trình nghệ thuật lớn, tăng hơn 7 lần so với bình thường.",
+      "author": "Dân trí",
+      "category": [
+        "Bất động sản",
+        "Nhịp sống đô thị"
+      ],
+      "publishedAt": "2026-10-22T13:37:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/bat-dong-san/tphcm-soi-dong-mua-concert-nganh-kinh-doanh-nao-dang-huong-loi-20261022124431968.htm",
+      "image": "assets/dtri-20261022124431968.jpg"
+    },
+    {
+      "id": "dtri-20261022093351224",
+      "title": "Vợ ông Bùi Thành Nhơn đăng ký bán hơn 6 triệu cổ phiếu Novaland",
+      "slug": "vo-ong-bui-thanh-nhon-dang-ky-ban-hon-6-trieu-co-phieu-novaland-20261022093351224",
+      "excerpt": "(Dân trí) - Vợ ông Bùi Thành Nhơn đăng ký bán 6,3 triệu cổ phiếu Novaland từ ngày 26/10 đến 30/10, giảm tỷ lệ sở hữu tại doanh nghiệp xuống còn 1,89%.",
+      "content": "(Dân trí) - Vợ ông Bùi Thành Nhơn đăng ký bán 6,3 triệu cổ phiếu Novaland từ ngày 26/10 đến 30/10, giảm tỷ lệ sở hữu tại doanh nghiệp xuống còn 1,89%.",
+      "author": "Dân trí",
+      "category": [
+        "Bất động sản",
+        "Thị trường"
+      ],
+      "publishedAt": "2026-10-22T09:37:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/bat-dong-san/vo-ong-bui-thanh-nhon-dang-ky-ban-hon-6-trieu-co-phieu-novaland-20261022093351224.htm",
+      "image": "assets/dtri-20261022093351224.jpg"
+    },
+    {
+      "id": "dtri-20261022152818714",
+      "title": "Cán bộ xã rời hội trường đổ ra đường \"chạy lúa\" giúp dân tránh mưa",
+      "slug": "can-bo-xa-roi-hoi-truong-do-ra-duong-chay-lua-giup-dan-tranh-mua-20261022152818714",
+      "excerpt": "(Dân trí) - Xã đang tổ chức cuộc họp, bất ngờ trời đổ cơn mưa, lãnh đạo và cán bộ nhanh chóng chạy ra đường, giúp bà con khẩn trương thu gom lúa đang phơi, hạn chế thiệt hại do mưa gây ra.",
+      "content": "(Dân trí) - Xã đang tổ chức cuộc họp, bất ngờ trời đổ cơn mưa, lãnh đạo và cán bộ nhanh chóng chạy ra đường, giúp bà con khẩn trương thu gom lúa đang phơi, hạn chế thiệt hại do mưa gây ra.",
+      "author": "Dân trí",
+      "category": [
+        "Đời sống",
+        "Cộng đồng"
+      ],
+      "publishedAt": "2026-10-22T15:40:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/doi-song/can-bo-xa-roi-hoi-truong-do-ra-duong-chay-lua-giup-dan-tranh-mua-20261022152818714.htm",
+      "image": "assets/dtri-20261022152818714.jpg"
+    },
+    {
+      "id": "dtri-20261021181920257",
+      "title": "Chắt chiu mua nhà ông Lê Thanh Thản, vợ chồng ở Hà Nội sống trong thấp thỏm",
+      "slug": "chat-chiu-mua-nha-ong-le-thanh-than-vo-chong-o-ha-noi-song-trong-thap-thom-20261021181920257",
+      "excerpt": "(Dân trí) - Căn hộ của vợ chồng ông Minh nằm trên tầng 31 của chung cư HH Linh Đàm, nơi chỉ được phép xây dựng 27 tầng. Người đàn ông lo lắng cuộc sống sẽ bị xáo trộn khi Hà Nội xử lý các vi phạm của chủ đầu tư.",
+      "content": "(Dân trí) - Căn hộ của vợ chồng ông Minh nằm trên tầng 31 của chung cư HH Linh Đàm, nơi chỉ được phép xây dựng 27 tầng. Người đàn ông lo lắng cuộc sống sẽ bị xáo trộn khi Hà Nội xử lý các vi phạm của chủ đầu tư.",
+      "author": "Dân trí",
+      "category": [
+        "Đời sống",
+        "Nhà đẹp"
+      ],
+      "publishedAt": "2026-10-22T06:02:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/doi-song/chat-chiu-mua-nha-ong-le-thanh-than-vo-chong-o-ha-noi-song-trong-thap-thom-20261021181920257.htm",
+      "image": "assets/dtri-20261021181920257.jpg"
+    },
+    {
+      "id": "dtri-20261022103345930",
+      "title": "Giới siêu giàu Thụy Sĩ ngầm khoe đẳng cấp bằng… vali chocolate",
+      "slug": "gioi-sieu-giau-thuy-si-ngam-khoe-dang-cap-bang-vali-chocolate-20261022103345930",
+      "excerpt": "Thay vì siêu xe và đồng hồ đắt tiền, giới đầu tư giàu có Thụy Sĩ thể hiện vị thế bằng chiếc vali chứa đầy chocolate. Món quà này được trao miễn phí, nhưng điều kiện để sở hữu không đơn giản.",
+      "content": "Thay vì siêu xe và đồng hồ đắt tiền, giới đầu tư giàu có Thụy Sĩ thể hiện vị thế bằng chiếc vali chứa đầy chocolate. Món quà này được trao miễn phí, nhưng điều kiện để sở hữu không đơn giản.",
+      "author": "Dân trí",
+      "category": [
+        "Đời sống",
+        "Thượng lưu"
+      ],
+      "publishedAt": "2026-10-22T12:50:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/doi-song/gioi-sieu-giau-thuy-si-ngam-khoe-dang-cap-bang-vali-chocolate-20261022103345930.htm",
+      "image": "assets/dtri-20261022103345930.jpg"
+    },
+    {
+      "id": "dtri-20261022174035496",
+      "title": "Nghe tiếng hét thất thanh, thợ ở Ninh Bình cứu bạn thoát chết vì điện giật",
+      "slug": "nghe-tieng-het-that-thanh-tho-o-ninh-binh-cuu-ban-thoat-chet-vi-dien-giat-20261022174035496",
+      "excerpt": "(Dân trí) - Nghe thấy tiếng hét thất thanh của anh T., anh M. may mắn phản ứng kịp ngắt điện và trèo lên cứu. Khi anh T. được đưa xuống, một bên bàn tay bị bỏng điện, nhưng may mắn không ảnh hưởng tới tính mạng.",
+      "content": "(Dân trí) - Nghe thấy tiếng hét thất thanh của anh T., anh M. may mắn phản ứng kịp ngắt điện và trèo lên cứu. Khi anh T. được đưa xuống, một bên bàn tay bị bỏng điện, nhưng may mắn không ảnh hưởng tới tính mạng.",
+      "author": "Dân trí",
+      "category": [
+        "Đời sống",
+        "Cộng đồng"
+      ],
+      "publishedAt": "2026-10-22T17:50:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/doi-song/nghe-tieng-het-that-thanh-tho-o-ninh-binh-cuu-ban-thoat-chet-vi-dien-giat-20261022174035496.htm",
+      "image": "assets/dtri-20261022174035496.jpg"
+    },
+    {
+      "id": "dtri-20261022130609702",
+      "title": "Nghiên cứu sinh người Việt nghi bị đầu độc: Người thân lên tiếng",
+      "slug": "nghien-cuu-sinh-nguoi-viet-nghi-bi-dau-doc-nguoi-than-len-tieng-20261022130609702",
+      "excerpt": "(Dân trí) - Anh T.K. (quê Nghệ An, nghiên cứu sinh ở Mỹ) - người nghi bị đồng nghiệp đầu độc - hiện chỉ ngủ được 1 giờ mỗi đêm, tê buốt chân và sức khỏe bị ảnh hưởng nghiêm trọng.",
+      "content": "(Dân trí) - Anh T.K. (quê Nghệ An, nghiên cứu sinh ở Mỹ) - người nghi bị đồng nghiệp đầu độc - hiện chỉ ngủ được 1 giờ mỗi đêm, tê buốt chân và sức khỏe bị ảnh hưởng nghiêm trọng.",
+      "author": "Dân trí",
+      "category": [
+        "Đời sống",
+        "Cộng đồng"
+      ],
+      "publishedAt": "2026-10-22T13:36:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/doi-song/nghien-cuu-sinh-nguoi-viet-nghi-bi-dau-doc-nguoi-than-len-tieng-20261022130609702.htm",
+      "image": "assets/dtri-20261022130609702.jpg"
+    },
+    {
+      "id": "dtri-20261022062036037",
+      "title": "Nhặt được túi xách chứa nhiều vàng, bảo vệ chợ mang đến công an",
+      "slug": "nhat-duoc-tui-xach-chua-nhieu-vang-bao-ve-cho-mang-den-cong-an-20261022062036037",
+      "excerpt": "(Dân trí) - Trong lúc làm nhiệm vụ bảo vệ ở chợ, ông Dũng nhặt được túi xách chứa nhiều trang sức dạng nhẫn, dây chuyền vàng. Ông lập tức mang tài sản đến công an trình báo, nhờ tìm người đánh rơi để trao trả.",
+      "content": "(Dân trí) - Trong lúc làm nhiệm vụ bảo vệ ở chợ, ông Dũng nhặt được túi xách chứa nhiều trang sức dạng nhẫn, dây chuyền vàng. Ông lập tức mang tài sản đến công an trình báo, nhờ tìm người đánh rơi để trao trả.",
+      "author": "Dân trí",
+      "category": [
+        "Đời sống",
+        "Cộng đồng"
+      ],
+      "publishedAt": "2026-10-22T08:40:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/doi-song/nhat-duoc-tui-xach-chua-nhieu-vang-bao-ve-cho-mang-den-cong-an-20261022062036037.htm",
+      "image": "assets/dtri-20261022062036037.jpg"
+    },
+    {
+      "id": "dtri-20261021112848515",
+      "title": "Sẽ có tiêu chí chấm điểm mô hình xây dựng người Hà Nội thanh lịch, văn minh",
+      "slug": "se-co-tieu-chi-cham-diem-mo-hinh-xay-dung-nguoi-ha-noi-thanh-lich-van-minh-20261021112848515",
+      "excerpt": "(Dân trí) - Hà Nội đặt ra yêu cầu đưa các quy tắc ứng xử, xây dựng người Hà Nội thanh lịch, văn minh vào thực tiễn bằng 10 mô hình cụ thể và có tiêu chí đánh giá rõ ràng.",
+      "content": "(Dân trí) - Hà Nội đặt ra yêu cầu đưa các quy tắc ứng xử, xây dựng người Hà Nội thanh lịch, văn minh vào thực tiễn bằng 10 mô hình cụ thể và có tiêu chí đánh giá rõ ràng.",
+      "author": "Dân trí",
+      "category": [
+        "Đời sống",
+        "Cộng đồng"
+      ],
+      "publishedAt": "2026-10-21T15:18:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/doi-song/se-co-tieu-chi-cham-diem-mo-hinh-xay-dung-nguoi-ha-noi-thanh-lich-van-minh-20261021112848515.htm",
+      "image": "assets/dtri-20261021112848515.jpg"
+    },
+    {
+      "id": "dtri-20261021115825703",
+      "title": "Thành Cát Tư Hãn: Cuộc đời lẫy lừng và ngôi mộ bí ẩn 800 năm chưa tìm thấy",
+      "slug": "thanh-cat-tu-han-cuoc-doi-lay-lung-va-ngoi-mo-bi-an-800-nam-chua-tim-thay-20261021115825703",
+      "excerpt": "(Dân trí) - Từ một cậu bé bị bỏ rơi trên thảo nguyên, Thành Cát Tư Hãn đã dựng nên một đế chế lớn mạnh trong lịch sử. Nhưng gần 800 năm sau khi ông qua đời, nơi chôn cất của ông vẫn là bí ẩn lớn trên thế giới.",
+      "content": "(Dân trí) - Từ một cậu bé bị bỏ rơi trên thảo nguyên, Thành Cát Tư Hãn đã dựng nên một đế chế lớn mạnh trong lịch sử. Nhưng gần 800 năm sau khi ông qua đời, nơi chôn cất của ông vẫn là bí ẩn lớn trên thế giới.",
+      "author": "Huy Hoàng",
+      "category": [
+        "Đời sống",
+        "Thượng lưu"
+      ],
+      "publishedAt": "2026-10-21T14:05:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/doi-song/thanh-cat-tu-han-cuoc-doi-lay-lung-va-ngoi-mo-bi-an-800-nam-chua-tim-thay-20261021115825703.htm",
+      "image": "assets/dtri-20261021115825703.jpg"
+    },
+    {
+      "id": "dtri-20261021123742201",
+      "title": "Tỷ phú Hong Kong từng đi cọ toilet, cuối đời hiến hết gia sản làm từ thiện",
+      "slug": "ty-phu-hong-kong-tung-di-co-toilet-cuoi-doi-hien-het-gia-san-lam-tu-thien-20261021123742201",
+      "excerpt": "(Dân trí) - Từ người lao động chân tay tại Hong Kong (Trung Quốc), Yu Pang Lin vươn lên trở thành ông trùm bất động sản, khách sạn với khối tài sản hàng tỷ USD. Cuối đời, ông không để lại thừa kế cho con.",
+      "content": "(Dân trí) - Từ người lao động chân tay tại Hong Kong (Trung Quốc), Yu Pang Lin vươn lên trở thành ông trùm bất động sản, khách sạn với khối tài sản hàng tỷ USD. Cuối đời, ông không để lại thừa kế cho con.",
+      "author": "Dân trí",
+      "category": [
+        "Đời sống",
+        "Thượng lưu"
+      ],
+      "publishedAt": "2026-10-21T17:00:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/doi-song/ty-phu-hong-kong-tung-di-co-toilet-cuoi-doi-hien-het-gia-san-lam-tu-thien-20261021123742201.htm",
+      "image": "assets/dtri-20261021123742201.jpg"
+    },
+    {
+      "id": "dtri-20261022153327717",
+      "title": "Bí thư xã livestream chốt hơn 1.700 đơn hàng cây giống ở miền Tây",
+      "slug": "bi-thu-xa-livestream-chot-hon-1700-don-hang-cay-giong-o-mien-tay-20261022153327717",
+      "excerpt": "(Dân trí) - Sau 180 phút livestream bán cây giống, Bí thư Đảng ủy xã Chợ Lách (Vĩnh Long) cùng các nhà sáng tạo nội dung ghi nhận hơn 1.700 đơn hàng. Dự kiến hoa kiểng Tết 2027 sẽ tiếp tục lên sóng livestream.",
+      "content": "(Dân trí) - Sau 180 phút livestream bán cây giống, Bí thư Đảng ủy xã Chợ Lách (Vĩnh Long) cùng các nhà sáng tạo nội dung ghi nhận hơn 1.700 đơn hàng. Dự kiến hoa kiểng Tết 2027 sẽ tiếp tục lên sóng livestream.",
+      "author": "Dân trí",
+      "category": [
+        "Kinh doanh",
+        "Tài chính"
+      ],
+      "publishedAt": "2026-10-22T16:53:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/kinh-doanh/bi-thu-xa-livestream-chot-hon-1700-don-hang-cay-giong-o-mien-tay-20261022153327717.htm",
+      "image": "assets/dtri-20261022153327717.jpg"
+    },
+    {
+      "id": "dtri-20261022125852886",
+      "title": "Bộ Công Thương yêu cầu bảo đảm nguồn hàng, xăng dầu, bình ổn giá cuối năm",
+      "slug": "bo-cong-thuong-yeu-cau-bao-dam-nguon-hang-xang-dau-binh-on-gia-cuoi-nam-20261022125852886",
+      "excerpt": "(Dân trí) - Các tỉnh, thành phố khu vực phía Nam phải bảo đảm nguồn hàng, xăng dầu, bình ổn giá trong dịp cuối năm và Tết Nguyên đán 2027; hỗ trợ doanh nghiệp đa dạng hóa thị trường xuất khẩu...",
+      "content": "(Dân trí) - Các tỉnh, thành phố khu vực phía Nam phải bảo đảm nguồn hàng, xăng dầu, bình ổn giá trong dịp cuối năm và Tết Nguyên đán 2027; hỗ trợ doanh nghiệp đa dạng hóa thị trường xuất khẩu...",
+      "author": "Dân trí",
+      "category": [
+        "Kinh doanh",
+        "Tài chính"
+      ],
+      "publishedAt": "2026-10-22T14:15:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/kinh-doanh/bo-cong-thuong-yeu-cau-bao-dam-nguon-hang-xang-dau-binh-on-gia-cuoi-nam-20261022125852886.htm",
+      "image": "assets/dtri-20261022125852886.jpg"
+    },
+    {
+      "id": "dtri-20261022172209950",
+      "title": "Chứng khoán HD báo lãi 9 tháng gấp 3,7 lần cùng kỳ",
+      "slug": "chung-khoan-hd-bao-lai-9-thang-gap-37-lan-cung-ky-20261022172209950",
+      "excerpt": "(Dân trí) - Lợi nhuận trước thuế 9 tháng năm 2026 của Chứng khoán HD (HDS) đạt 2.241 tỷ đồng, gấp 3,7 lần cùng kỳ và gấp 1,7 lần cả năm 2025. Mảng ngân hàng đầu tư bứt phá, trong khi nguồn vốn mới bổ sung đã bắt đầu sinh lời.",
+      "content": "(Dân trí) - Lợi nhuận trước thuế 9 tháng năm 2026 của Chứng khoán HD (HDS) đạt 2.241 tỷ đồng, gấp 3,7 lần cùng kỳ và gấp 1,7 lần cả năm 2025. Mảng ngân hàng đầu tư bứt phá, trong khi nguồn vốn mới bổ sung đã bắt đầu sinh lời.",
+      "author": "Dân trí",
+      "category": [
+        "Kinh doanh",
+        "Chứng khoán"
+      ],
+      "publishedAt": "2026-10-22T18:30:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/kinh-doanh/chung-khoan-hd-bao-lai-9-thang-gap-37-lan-cung-ky-20261022172209950.htm",
+      "image": "assets/dtri-20261022172209950.jpg"
+    },
+    {
+      "id": "dtri-20261022161712697",
+      "title": "Chuyên gia nêu điều kiện để lãi suất giảm thực chất, không chỉ cam kết",
+      "slug": "chuyen-gia-neu-dieu-kien-de-lai-suat-giam-thuc-chat-khong-chi-cam-ket-20261022161712697",
+      "excerpt": "(Dân trí) - Ngân hàng Nhà nước yêu cầu giảm lãi suất huy động và cho vay, chuyên gia cho rằng muốn lãi suất giảm lâu dài, cần giảm được chi phí vốn, áp lực thanh khoản và rủi ro cho vay...",
+      "content": "(Dân trí) - Ngân hàng Nhà nước yêu cầu giảm lãi suất huy động và cho vay, chuyên gia cho rằng muốn lãi suất giảm lâu dài, cần giảm được chi phí vốn, áp lực thanh khoản và rủi ro cho vay...",
+      "author": "Dân trí",
+      "category": [
+        "Kinh doanh",
+        "Tài chính"
+      ],
+      "publishedAt": "2026-10-22T17:28:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/kinh-doanh/chuyen-gia-neu-dieu-kien-de-lai-suat-giam-thuc-chat-khong-chi-cam-ket-20261022161712697.htm",
+      "image": "assets/dtri-20261022161712697.jpg"
+    },
+    {
+      "id": "dtri-20261022131122929",
+      "title": "Giá vàng, USD đồng loạt giảm mạnh",
+      "slug": "gia-vang-usd-dong-loat-giam-manh-20261022131122929",
+      "excerpt": "(Dân trí) - Giá vàng thế giới mất mốc 4.100 USD/ounce; vàng miếng SJC giảm 1,4 triệu đồng/lượng từ đầu tuần. Cùng lúc, giá USD ngân hàng tiếp tục đi xuống, về sát 26.000 đồng/USD ở chiều bán.",
+      "content": "(Dân trí) - Giá vàng thế giới mất mốc 4.100 USD/ounce; vàng miếng SJC giảm 1,4 triệu đồng/lượng từ đầu tuần. Cùng lúc, giá USD ngân hàng tiếp tục đi xuống, về sát 26.000 đồng/USD ở chiều bán.",
+      "author": "Dân trí",
+      "category": [
+        "Kinh doanh",
+        "Tài chính"
+      ],
+      "publishedAt": "2026-10-22T13:52:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-vang-usd-dong-loat-giam-manh-20261022131122929.htm",
+      "image": "assets/dtri-20261022131122929.jpg"
+    },
+    {
+      "id": "dtri-20261022142613733",
+      "title": "Giá xăng giảm mạnh, có loại giảm gần 2.000 đồng/lít",
+      "slug": "gia-xang-giam-manh-co-loai-giam-gan-2000-donglit-20261022142613733",
+      "excerpt": "(Dân trí) - Từ 15h ngày 22/10, giá xăng giảm mạnh, dầu tăng. Trong đó, giá xăng giảm tiếp 1.610-1.810 đồng/lít.",
+      "content": "(Dân trí) - Từ 15h ngày 22/10, giá xăng giảm mạnh, dầu tăng. Trong đó, giá xăng giảm tiếp 1.610-1.810 đồng/lít.",
+      "author": "Dân trí",
+      "category": [
+        "Kinh doanh",
+        "Tài chính"
+      ],
+      "publishedAt": "2026-10-22T14:40:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/kinh-doanh/gia-xang-giam-manh-co-loai-giam-gan-2000-donglit-20261022142613733.htm",
+      "image": "assets/dtri-20261022142613733.jpg"
+    },
+    {
+      "id": "dtri-20261021160502302",
+      "title": "Phân biệt 7 loại nhựa dưới đáy chai: Dùng sao cho an toàn và bền vững?",
+      "slug": "phan-biet-7-loai-nhua-duoi-day-chai-dung-sao-cho-an-toan-va-ben-vung-20261021160502302",
+      "excerpt": "(Dân trí) - Ký hiệu tam giác đánh số từ 1 đến 7 dưới đáy hộp nhựa không phải \"bảo chứng\" cho việc tái chế. Hiểu đúng từng mã nhựa giúp người dùng bảo vệ sức khỏe và giúp doanh nghiệp nắm chắc quy định mới.",
+      "content": "(Dân trí) - Ký hiệu tam giác đánh số từ 1 đến 7 dưới đáy hộp nhựa không phải \"bảo chứng\" cho việc tái chế. Hiểu đúng từng mã nhựa giúp người dùng bảo vệ sức khỏe và giúp doanh nghiệp nắm chắc quy định mới.",
+      "author": "Dân trí",
+      "category": [
+        "Kinh doanh",
+        "ESG Việt Nam"
+      ],
+      "publishedAt": "2026-10-22T14:06:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/kinh-doanh/phan-biet-7-loai-nhua-duoi-day-chai-dung-sao-cho-an-toan-va-ben-vung-20261021160502302.htm",
+      "image": "assets/dtri-20261021160502302.jpg"
+    },
+    {
+      "id": "dtri-20261022171001377",
+      "title": "Techcombank giảm lãi suất cho vay đến 2%",
+      "slug": "techcombank-giam-lai-suat-cho-vay-den-2-20261022171001377",
+      "excerpt": "(Dân trí) - Sau chỉ đạo của Chính phủ và Ngân hàng Nhà nước, Techcombank triển khai giảm lãi suất cho vay, với mức giảm tối đa 2%/năm.",
+      "content": "(Dân trí) - Sau chỉ đạo của Chính phủ và Ngân hàng Nhà nước, Techcombank triển khai giảm lãi suất cho vay, với mức giảm tối đa 2%/năm.",
+      "author": "Dân trí",
+      "category": [
+        "Kinh doanh",
+        "Tài chính"
+      ],
+      "publishedAt": "2026-10-22T17:14:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/kinh-doanh/techcombank-giam-lai-suat-cho-vay-den-2-20261022171001377.htm",
+      "image": "assets/dtri-20261022171001377.jpg"
+    },
+    {
+      "id": "dtri-20261022085624094",
+      "title": "Tỷ phú Vượng dự kiến rót 500 triệu USD xây nhà máy xe điện tại Philippines",
+      "slug": "ty-phu-vuong-du-kien-rot-500-trieu-usd-xay-nha-may-xe-dien-tai-philippines-20261022085624094",
+      "excerpt": "(Dân trí) - Nhà máy công suất 200.000 xe mỗi năm của Vingroup tại Philippines dự kiến khởi công vào đầu năm 2027, nhắm tới cả thị trường ô tô 4 bánh lẫn xe máy điện nội địa và xuất khẩu.",
+      "content": "(Dân trí) - Nhà máy công suất 200.000 xe mỗi năm của Vingroup tại Philippines dự kiến khởi công vào đầu năm 2027, nhắm tới cả thị trường ô tô 4 bánh lẫn xe máy điện nội địa và xuất khẩu.",
+      "author": "Dân trí",
+      "category": [
+        "Kinh doanh",
+        "Chứng khoán"
+      ],
+      "publishedAt": "2026-10-22T14:03:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/kinh-doanh/ty-phu-vuong-du-kien-rot-500-trieu-usd-xay-nha-may-xe-dien-tai-philippines-20261022085624094.htm",
+      "image": "assets/dtri-20261022085624094.jpg"
+    },
+    {
+      "id": "dtri-20261022152117394",
+      "title": "VN-Index tăng gần 70 điểm hai phiên, nhà đầu tư vẫn chưa vui",
+      "slug": "vn-index-tang-gan-70-diem-hai-phien-nha-dau-tu-van-chua-vui-20261022152117394",
+      "excerpt": "(Dân trí) - Chứng khoán tăng mạnh hai phiên liên tiếp đưa chỉ số chung vượt 1.760 điểm nhưng phần lớn nhà đầu tư vẫn thua lỗ, danh mục chìm trong sắc đỏ.",
+      "content": "(Dân trí) - Chứng khoán tăng mạnh hai phiên liên tiếp đưa chỉ số chung vượt 1.760 điểm nhưng phần lớn nhà đầu tư vẫn thua lỗ, danh mục chìm trong sắc đỏ.",
+      "author": "Dân trí",
+      "category": [
+        "Kinh doanh",
+        "Chứng khoán"
+      ],
+      "publishedAt": "2026-10-22T15:24:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/kinh-doanh/vn-index-tang-gan-70-diem-hai-phien-nha-dau-tu-van-chua-vui-20261022152117394.htm",
+      "image": "assets/dtri-20261022152117394.jpg"
+    },
+    {
+      "id": "dtri-20261022131537766",
+      "title": "Bác sĩ cảnh báo trẻ sốt xuất huyết có thể trở nặng khi vừa hạ sốt",
+      "slug": "bac-si-canh-bao-tre-sot-xuat-huyet-co-the-tro-nang-khi-vua-ha-sot-20261022131537766",
+      "excerpt": "(Dân trí) - Sốt xuất huyết ở trẻ có thể diễn tiến nguy hiểm ngay cả khi trẻ hết sốt. Bác sĩ khuyến cáo phụ huynh theo dõi sát, đặc biệt từ ngày thứ 3 đến ngày thứ 7, để phát hiện biến chứng.",
+      "content": "(Dân trí) - Sốt xuất huyết ở trẻ có thể diễn tiến nguy hiểm ngay cả khi trẻ hết sốt. Bác sĩ khuyến cáo phụ huynh theo dõi sát, đặc biệt từ ngày thứ 3 đến ngày thứ 7, để phát hiện biến chứng.",
+      "author": "Dân trí",
+      "category": [
+        "Sức khỏe",
+        "Ung thư"
+      ],
+      "publishedAt": "2026-10-22T15:38:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/suc-khoe/bac-si-canh-bao-tre-sot-xuat-huyet-co-the-tro-nang-khi-vua-ha-sot-20261022131537766.htm",
+      "image": "assets/dtri-20261022131537766.jpg"
+    },
+    {
+      "id": "dtri-20261014153931241",
+      "title": "Biển \"Cấm quay phim, chụp ảnh\" trong bệnh viện và góc nhìn pháp lý",
+      "slug": "bien-cam-quay-phim-chup-anh-trong-benh-vien-va-goc-nhin-phap-ly-20261014153931241",
+      "excerpt": "(Dân trí) - Biển cấm quay phim, chụp ảnh tại bệnh viện nhằm bảo vệ quyền riêng tư người bệnh, nhưng không nên trở thành rào cản đối với quyền giám sát, phản ánh sai phạm của người dân.",
+      "content": "(Dân trí) - Biển cấm quay phim, chụp ảnh tại bệnh viện nhằm bảo vệ quyền riêng tư người bệnh, nhưng không nên trở thành rào cản đối với quyền giám sát, phản ánh sai phạm của người dân.",
+      "author": "Dân trí",
+      "category": [
+        "Sức khỏe",
+        "Ngoại thần kinh - Cột sống"
+      ],
+      "publishedAt": "2026-10-22T09:18:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/suc-khoe/bien-cam-quay-phim-chup-anh-trong-benh-vien-va-goc-nhin-phap-ly-20261014153931241.htm",
+      "image": "assets/dtri-20261014153931241.jpg"
+    },
+    {
+      "id": "dtri-20261022154807959",
+      "title": "Ca bệnh não mô cầu mới nhất ở TPHCM hiện ra sao?",
+      "slug": "ca-benh-nao-mo-cau-moi-nhat-o-tphcm-hien-ra-sao-20261022154807959",
+      "excerpt": "Bé trai 12 tuổi là trường hợp gần nhất phát hiện mắc não mô cầu trong thời gian gần đây ở TPHCM đang được điều trị tích cực.",
+      "content": "Bé trai 12 tuổi là trường hợp gần nhất phát hiện mắc não mô cầu trong thời gian gần đây ở TPHCM đang được điều trị tích cực.",
+      "author": "Dân trí",
+      "category": [
+        "Sức khỏe",
+        "Ngoại thần kinh - Cột sống"
+      ],
+      "publishedAt": "2026-10-22T15:58:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/suc-khoe/ca-benh-nao-mo-cau-moi-nhat-o-tphcm-hien-ra-sao-20261022154807959.htm",
+      "image": "assets/dtri-20261022154807959.jpg"
+    },
+    {
+      "id": "dtri-20261020185935089",
+      "title": "Cô gái 24 tuổi trước ca mổ ung thư: \"Cứ lạc quan, rồi sẽ vượt qua\"",
+      "slug": "co-gai-24-tuoi-truoc-ca-mo-ung-thu-cu-lac-quan-roi-se-vuot-qua-20261020185935089",
+      "excerpt": "\"Em chưa biết sau mổ có đặt hậu môn nhân tạo hay không, bản thân cũng có hơi lo. Nhưng em mong mọi người giữ được tinh thần, luôn lạc quan, rồi sẽ vượt qua bệnh tật\", nữ bệnh nhân ung thư tâm sự.",
+      "content": "\"Em chưa biết sau mổ có đặt hậu môn nhân tạo hay không, bản thân cũng có hơi lo. Nhưng em mong mọi người giữ được tinh thần, luôn lạc quan, rồi sẽ vượt qua bệnh tật\", nữ bệnh nhân ung thư tâm sự.",
+      "author": "Dân trí",
+      "category": [
+        "Sức khỏe",
+        "Ung thư"
+      ],
+      "publishedAt": "2026-10-22T07:21:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/suc-khoe/co-gai-24-tuoi-truoc-ca-mo-ung-thu-cu-lac-quan-roi-se-vuot-qua-20261020185935089.htm",
+      "image": "assets/dtri-20261020185935089.jpg"
+    },
+    {
+      "id": "dtri-20261021112817794",
+      "title": "Hàng dài người chờ hóa xạ trị lúc trời chưa sáng, có bệnh nhân đi từ 2h",
+      "slug": "hang-dai-nguoi-cho-hoa-xa-tri-luc-troi-chua-sang-co-benh-nhan-di-tu-2h-20261021112817794",
+      "excerpt": "(Dân trí) - Lượng bệnh nhân tại cơ sở điều trị ung bướu tuyến cuối phần nào phản ánh gánh nặng ung thư tại Việt Nam và áp lực lên người bệnh, gia đình lẫn hệ thống y tế.",
+      "content": "(Dân trí) - Lượng bệnh nhân tại cơ sở điều trị ung bướu tuyến cuối phần nào phản ánh gánh nặng ung thư tại Việt Nam và áp lực lên người bệnh, gia đình lẫn hệ thống y tế.",
+      "author": "Dân trí",
+      "category": [
+        "Sức khỏe",
+        "Ung thư"
+      ],
+      "publishedAt": "2026-10-22T08:31:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/suc-khoe/hang-dai-nguoi-cho-hoa-xa-tri-luc-troi-chua-sang-co-benh-nhan-di-tu-2h-20261021112817794.htm",
+      "image": "assets/dtri-20261021112817794.jpg"
+    },
+    {
+      "id": "dtri-20261022091909262",
+      "title": "Hà Nội vào mùa kiến ba khoang, cảnh báo sai lầm khiến da tổn thương nặng",
+      "slug": "ha-noi-vao-mua-kien-ba-khoang-canh-bao-sai-lam-khien-da-ton-thuong-nang-20261022091909262",
+      "excerpt": "(Dân trí) - Bác sĩ cảnh báo viêm da do kiến ba khoang dễ bị nhầm với zona, dẫn đến điều trị sai cách.",
+      "content": "(Dân trí) - Bác sĩ cảnh báo viêm da do kiến ba khoang dễ bị nhầm với zona, dẫn đến điều trị sai cách.",
+      "author": "Dân trí",
+      "category": [
+        "Sức khỏe",
+        "Sinh sản - Hiếm muộn"
+      ],
+      "publishedAt": "2026-10-22T11:00:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/suc-khoe/ha-noi-vao-mua-kien-ba-khoang-canh-bao-sai-lam-khien-da-ton-thuong-nang-20261022091909262.htm",
+      "image": "assets/dtri-20261022091909262.jpg"
+    },
+    {
+      "id": "dtri-20261022071214379",
+      "title": "Học sinh lấy đá ném tổ ong trong sân trường, 27 em phải nhập viện",
+      "slug": "hoc-sinh-lay-da-nem-to-ong-trong-san-truong-27-em-phai-nhap-vien-20261022071214379",
+      "excerpt": "(Dân trí) - Phát hiện tổ ong trên cây xà cừ, một số học sinh tại Quảng Trị đã dùng đá ném khiến đàn ong kéo xuống tấn công nhiều em đang chơi ở sân trường, trong đó 27 trường hợp phải nhập viện.",
+      "content": "(Dân trí) - Phát hiện tổ ong trên cây xà cừ, một số học sinh tại Quảng Trị đã dùng đá ném khiến đàn ong kéo xuống tấn công nhiều em đang chơi ở sân trường, trong đó 27 trường hợp phải nhập viện.",
+      "author": "Dân trí",
+      "category": [
+        "Sức khỏe",
+        "Ngoại thần kinh - Cột sống"
+      ],
+      "publishedAt": "2026-10-22T08:24:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/suc-khoe/hoc-sinh-lay-da-nem-to-ong-trong-san-truong-27-em-phai-nhap-vien-20261022071214379.htm",
+      "image": "assets/dtri-20261022071214379.jpg"
+    },
+    {
+      "id": "dtri-20261021195640705",
+      "title": "Mô hình y khoa học thuật kết hợp khám chữa bệnh, đào tạo và nghiên cứu",
+      "slug": "mo-hinh-y-khoa-hoc-thuat-ket-hop-kham-chua-benh-dao-tao-va-nghien-cuu-20261021195640705",
+      "excerpt": "(Dân trí) - Trung tâm Y khoa Đại học thuộc Trường Đại học Y Dược, Đại học Quốc gia Hà Nội, triển khai mô hình y khoa học thuật, kết hợp khám chữa bệnh với đào tạo thực hành và nghiên cứu khoa học.",
+      "content": "(Dân trí) - Trung tâm Y khoa Đại học thuộc Trường Đại học Y Dược, Đại học Quốc gia Hà Nội, triển khai mô hình y khoa học thuật, kết hợp khám chữa bệnh với đào tạo thực hành và nghiên cứu khoa học.",
+      "author": "Dân trí",
+      "category": [
+        "Sức khỏe",
+        "Sinh sản - Hiếm muộn"
+      ],
+      "publishedAt": "2026-10-22T08:36:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/suc-khoe/mo-hinh-y-khoa-hoc-thuat-ket-hop-kham-chua-benh-dao-tao-va-nghien-cuu-20261021195640705.htm",
+      "image": "assets/dtri-20261021195640705.jpg"
+    },
+    {
+      "id": "dtri-20261021074924386",
+      "title": "Trẻ lớp 8 vẫn \"tè dầm\", bác sĩ phát hiện thói quen sinh hoạt bất thường",
+      "slug": "tre-lop-8-van-te-dam-bac-si-phat-hien-thoi-quen-sinh-hoat-bat-thuong-20261021074924386",
+      "excerpt": "(Dân trí) - Bé trai 13 tuổi thường xuyên thức đêm dùng điện thoại, khiến nhịp sinh hoạt đảo lộn. Trẻ có biểu hiện tè dầm cả ban ngày lẫn ban đêm khi ngủ.",
+      "content": "(Dân trí) - Bé trai 13 tuổi thường xuyên thức đêm dùng điện thoại, khiến nhịp sinh hoạt đảo lộn. Trẻ có biểu hiện tè dầm cả ban ngày lẫn ban đêm khi ngủ.",
+      "author": "Dân trí",
+      "category": [
+        "Sức khỏe",
+        "Sinh sản - Hiếm muộn"
+      ],
+      "publishedAt": "2026-10-22T08:45:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/suc-khoe/tre-lop-8-van-te-dam-bac-si-phat-hien-thoi-quen-sinh-hoat-bat-thuong-20261021074924386.htm",
+      "image": "assets/dtri-20261021074924386.jpg"
+    },
+    {
+      "id": "dtri-20261022084052946",
+      "title": "Uống 2-3 lít nước cam ép mỗi ngày, người đàn ông bị gan nhiễm mỡ nặng",
+      "slug": "uong-2-3-lit-nuoc-cam-ep-moi-ngay-nguoi-dan-ong-bi-gan-nhiem-mo-nang-20261022084052946",
+      "excerpt": "(Dân trí) - Thường xuyên tập thể thao, không thừa cân và ít uống rượu bia, người đàn ông 48 tuổi bất ngờ phát hiện gan nhiễm mỡ nặng. Bệnh nhân có thói quen uống 2-3 lít nước cam ép mỗi ngày thay nước lọc.",
+      "content": "(Dân trí) - Thường xuyên tập thể thao, không thừa cân và ít uống rượu bia, người đàn ông 48 tuổi bất ngờ phát hiện gan nhiễm mỡ nặng. Bệnh nhân có thói quen uống 2-3 lít nước cam ép mỗi ngày thay nước lọc.",
+      "author": "Dân trí",
+      "category": [
+        "Sức khỏe",
+        "Sinh sản - Hiếm muộn"
+      ],
+      "publishedAt": "2026-10-22T14:16:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/suc-khoe/uong-2-3-lit-nuoc-cam-ep-moi-ngay-nguoi-dan-ong-bi-gan-nhiem-mo-nang-20261022084052946.htm",
+      "image": "assets/dtri-20261022084052946.jpg"
+    },
+    {
+      "id": "dtri-20261022163550134",
+      "title": "Bắt giữ tàu chở 171.000 tấn quặng va vào cầu cảng ở Dung Quất",
+      "slug": "bat-giu-tau-cho-171000-tan-quang-va-vao-cau-cang-o-dung-quat-20261022163550134",
+      "excerpt": "(Dân trí) - Cảng vụ Hàng hải tỉnh Quảng Ngãi đã thực hiện quyết định bắt giữ con tàu va vào cầu cảng tại cảng Dung Quất. Việc này được thực hiện theo quyết định của tòa án trên cơ sở yêu cầu của bên bị thiệt hại.",
+      "content": "(Dân trí) - Cảng vụ Hàng hải tỉnh Quảng Ngãi đã thực hiện quyết định bắt giữ con tàu va vào cầu cảng tại cảng Dung Quất. Việc này được thực hiện theo quyết định của tòa án trên cơ sở yêu cầu của bên bị thiệt hại.",
+      "author": "Dân trí",
+      "category": [
+        "Thời sự",
+        "Giao thông"
+      ],
+      "publishedAt": "2026-10-22T18:39:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/thoi-su/bat-giu-tau-cho-171000-tan-quang-va-vao-cau-cang-o-dung-quat-20261022163550134.htm",
+      "image": "assets/dtri-20261022163550134.jpg"
+    },
+    {
+      "id": "dtri-20261022153353863",
+      "title": "Cận cảnh súng thần công dài gần 3m, phát lộ khi tu bổ Thành Điện Hải",
+      "slug": "can-canh-sung-than-cong-dai-gan-3m-phat-lo-khi-tu-bo-thanh-dien-hai-20261022153353863",
+      "excerpt": "(Dân trí) - Khẩu súng thần công dài gần 3m phát lộ tại Thành Điện Hải (Đà Nẵng) đã được đưa lên khỏi hố đào để bảo quản, nghiên cứu. Hiện vật còn khá nguyên vẹn, không bị gãy vỡ.",
+      "content": "(Dân trí) - Khẩu súng thần công dài gần 3m phát lộ tại Thành Điện Hải (Đà Nẵng) đã được đưa lên khỏi hố đào để bảo quản, nghiên cứu. Hiện vật còn khá nguyên vẹn, không bị gãy vỡ.",
+      "author": "Dân trí",
+      "category": [
+        "Thời sự",
+        "Nóng trên mạng"
+      ],
+      "publishedAt": "2026-10-22T16:08:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/thoi-su/can-canh-sung-than-cong-dai-gan-3m-phat-lo-khi-tu-bo-thanh-dien-hai-20261022153353863.htm",
+      "image": "assets/dtri-20261022153353863.jpg"
+    },
+    {
+      "id": "dtri-20261022161700342",
+      "title": "Điều tàu cứu nạn tìm 4 ngư dân Mũi Né mất tích gần mỏ Sư Tử Trắng",
+      "slug": "dieu-tau-cuu-nan-tim-4-ngu-dan-mui-ne-mat-tich-gan-mo-su-tu-trang-20261022161700342",
+      "excerpt": "(Dân trí) - Tàu cứu nạn SAR 272 được điều động tham gia tìm kiếm 4 ngư dân Mũi Né mất tích sau vụ chìm tàu cá gần mỏ Sư Tử Trắng.",
+      "content": "(Dân trí) - Tàu cứu nạn SAR 272 được điều động tham gia tìm kiếm 4 ngư dân Mũi Né mất tích sau vụ chìm tàu cá gần mỏ Sư Tử Trắng.",
+      "author": "Dân trí",
+      "category": [
+        "Thời sự",
+        "Giao thông"
+      ],
+      "publishedAt": "2026-10-22T17:21:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/thoi-su/dieu-tau-cuu-nan-tim-4-ngu-dan-mui-ne-mat-tich-gan-mo-su-tu-trang-20261022161700342.htm",
+      "image": "assets/dtri-20261022161700342.jpg"
+    },
+    {
+      "id": "dtri-20261022161148213",
+      "title": "Lâm Đồng thống nhất mở rộng cao tốc Tân Phú - Bảo Lộc",
+      "slug": "lam-dong-thong-nhat-mo-rong-cao-toc-tan-phu-bao-loc-20261022161148213",
+      "excerpt": "(Dân trí) - Cao tốc Tân Phú - Bảo Lộc được đầu tư, xây dựng quy mô hoàn chỉnh với nền đường rộng 22m, hoàn thành và khai thác trong quý IV/2028.",
+      "content": "(Dân trí) - Cao tốc Tân Phú - Bảo Lộc được đầu tư, xây dựng quy mô hoàn chỉnh với nền đường rộng 22m, hoàn thành và khai thác trong quý IV/2028.",
+      "author": "Dân trí",
+      "category": [
+        "Thời sự",
+        "Giao thông"
+      ],
+      "publishedAt": "2026-10-22T16:55:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/thoi-su/lam-dong-thong-nhat-mo-rong-cao-toc-tan-phu-bao-loc-20261022161148213.htm",
+      "image": "assets/dtri-20261022161148213.jpg"
+    },
+    {
+      "id": "dtri-20261022114541059",
+      "title": "Ngăn chặn người đàn ông có ý định tự đào hố làm mộ cho mình",
+      "slug": "ngan-chan-nguoi-dan-ong-co-y-dinh-tu-dao-ho-lam-mo-cho-minh-20261022114541059",
+      "excerpt": "(Dân trí) - Một người đàn ông ở Phú Thọ có biểu hiện tâm lý bất thường, tự đào hố với ý định làm mộ cho bản thân mình. Sau khi nhận tin báo từ người dân, công an lập tức có mặt tại hiện trường.",
+      "content": "(Dân trí) - Một người đàn ông ở Phú Thọ có biểu hiện tâm lý bất thường, tự đào hố với ý định làm mộ cho bản thân mình. Sau khi nhận tin báo từ người dân, công an lập tức có mặt tại hiện trường.",
+      "author": "Dân trí",
+      "category": [
+        "Thời sự",
+        "Nóng trên mạng"
+      ],
+      "publishedAt": "2026-10-22T11:54:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/thoi-su/ngan-chan-nguoi-dan-ong-co-y-dinh-tu-dao-ho-lam-mo-cho-minh-20261022114541059.htm",
+      "image": "assets/dtri-20261022114541059.jpg"
+    },
+    {
+      "id": "dtri-20261022155127803",
+      "title": "“Nhà nước không bao cấp về nhà ở, nhưng không để thị trường tự điều tiết”",
+      "slug": "nha-nuoc-khong-bao-cap-ve-nha-o-nhung-khong-de-thi-truong-tu-dieu-tiet-20261022155127803",
+      "excerpt": "(Dân trí) - Nhìn nhận cơ cấu nhà ở còn thiên về sở hữu và các loại hình nhà ở chưa được phân định rõ, Thủ tướng khẳng định quan điểm Nhà nước không bao cấp về nhà ở, nhưng không để thị trường tự điều tiết.",
+      "content": "(Dân trí) - Nhìn nhận cơ cấu nhà ở còn thiên về sở hữu và các loại hình nhà ở chưa được phân định rõ, Thủ tướng khẳng định quan điểm Nhà nước không bao cấp về nhà ở, nhưng không để thị trường tự điều tiết.",
+      "author": "Dân trí",
+      "category": [
+        "Thời sự",
+        "Chính trị"
+      ],
+      "publishedAt": "2026-10-22T18:01:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/thoi-su/nha-nuoc-khong-bao-cap-ve-nha-o-nhung-khong-de-thi-truong-tu-dieu-tiet-20261022155127803.htm",
+      "image": "assets/dtri-20261022155127803.jpg"
+    },
+    {
+      "id": "dtri-20261022155728077",
+      "title": "Những khu vực nào của tỉnh Phú Thọ dự kiến sáp nhập về Hà Nội?",
+      "slug": "nhung-khu-vuc-nao-cua-tinh-phu-tho-du-kien-sap-nhap-ve-ha-noi-20261022155728077",
+      "excerpt": "(Dân trí) - Dự kiến hơn 4.006ha gồm hơn 2.529ha thuộc Vườn quốc gia Ba Vì và 1.477ha vùng đệm ở xã Thịnh Minh, xã Lương Sơn, phường Kỳ Sơn của tỉnh Phú Thọ sẽ sáp nhập về Hà Nội.",
+      "content": "(Dân trí) - Dự kiến hơn 4.006ha gồm hơn 2.529ha thuộc Vườn quốc gia Ba Vì và 1.477ha vùng đệm ở xã Thịnh Minh, xã Lương Sơn, phường Kỳ Sơn của tỉnh Phú Thọ sẽ sáp nhập về Hà Nội.",
+      "author": "Dân trí",
+      "category": [
+        "Thời sự",
+        "Chính trị"
+      ],
+      "publishedAt": "2026-10-22T16:04:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/thoi-su/nhung-khu-vuc-nao-cua-tinh-phu-tho-du-kien-sap-nhap-ve-ha-noi-20261022155728077.htm",
+      "image": "assets/dtri-20261022155728077.jpg"
+    },
+    {
+      "id": "dtri-20261022181121848",
+      "title": "Phát hiện hàng loạt sai phạm tại Petimex, chuyển hồ sơ tới Bộ Công an",
+      "slug": "phat-hien-hang-loat-sai-pham-tai-petimex-chuyen-ho-so-toi-bo-cong-an-20261022181121848",
+      "excerpt": "(Dân trí) - Hàng loạt hành vi có dấu hiệu hình sự trong hoạt động kinh doanh xăng dầu tại Công ty Cổ phần Thương mại Dầu khí Đồng Tháp (Petimex) vừa được Thanh tra Chính phủ chỉ ra và chuyển tới Bộ Công an.",
+      "content": "(Dân trí) - Hàng loạt hành vi có dấu hiệu hình sự trong hoạt động kinh doanh xăng dầu tại Công ty Cổ phần Thương mại Dầu khí Đồng Tháp (Petimex) vừa được Thanh tra Chính phủ chỉ ra và chuyển tới Bộ Công an.",
+      "author": "Dân trí",
+      "category": [
+        "Thời sự",
+        "Chính trị"
+      ],
+      "publishedAt": "2026-10-22T18:24:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/thoi-su/phat-hien-hang-loat-sai-pham-tai-petimex-chuyen-ho-so-toi-bo-cong-an-20261022181121848.htm",
+      "image": "assets/dtri-20261022181121848.jpg"
+    },
+    {
+      "id": "dtri-20261022112111113",
+      "title": "Phát hiện tàu cá bị vỡ đáy, 4 ngư dân ở Mũi Né vẫn mất tích trên biển",
+      "slug": "phat-hien-tau-ca-bi-vo-day-4-ngu-dan-o-mui-ne-van-mat-tich-tren-bien-20261022112111113",
+      "excerpt": "(Dân trí) - Lực lượng cứu hộ phát hiện tàu cá bị vỡ đáy, không có người bên trong, trong khi 4 ngư dân Mũi Né vẫn mất tích trên vùng biển gần mỏ Sư Tử Trắng.",
+      "content": "(Dân trí) - Lực lượng cứu hộ phát hiện tàu cá bị vỡ đáy, không có người bên trong, trong khi 4 ngư dân Mũi Né vẫn mất tích trên vùng biển gần mỏ Sư Tử Trắng.",
+      "author": "Dân trí",
+      "category": [
+        "Thời sự",
+        "Giao thông"
+      ],
+      "publishedAt": "2026-10-22T12:12:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/thoi-su/phat-hien-tau-ca-bi-vo-day-4-ngu-dan-o-mui-ne-van-mat-tich-tren-bien-20261022112111113.htm",
+      "image": "assets/dtri-20261022112111113.jpg"
+    },
+    {
+      "id": "dtri-20261022151904402",
+      "title": "Tây Ninh công nhận Thuận Mỹ là xã An toàn khu",
+      "slug": "tay-ninh-cong-nhan-thuan-my-la-xa-an-toan-khu-20261022151904402",
+      "excerpt": "(Dân trí) - Xã Thuận Mỹ được UBND tỉnh Tây Ninh công nhận là xã An toàn khu, ghi nhận những đóng góp, hy sinh của quân và dân địa phương trong hai cuộc kháng chiến chống Pháp và Mỹ.",
+      "content": "(Dân trí) - Xã Thuận Mỹ được UBND tỉnh Tây Ninh công nhận là xã An toàn khu, ghi nhận những đóng góp, hy sinh của quân và dân địa phương trong hai cuộc kháng chiến chống Pháp và Mỹ.",
+      "author": "Dân trí",
+      "category": [
+        "Thời sự",
+        "Chính trị"
+      ],
+      "publishedAt": "2026-10-22T16:28:00+07:00",
+      "source": "dantri.com.vn",
+      "url": "https://dantri.com.vn/thoi-su/tay-ninh-cong-nhan-thuan-my-la-xa-an-toan-khu-20261022151904402.htm",
+      "image": "assets/dtri-20261022151904402.jpg"
+    }
+  ]
+};
+
