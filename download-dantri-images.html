@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tải ảnh Dân Trí cho Tin Việt</title>
+<style>
+:root{font-family:Arial,sans-serif;color:#202124;background:#f5f5f5}body{max-width:850px;margin:32px auto;padding:0 18px}.card{background:white;border:1px solid #ddd;border-radius:12px;padding:22px;margin:16px 0}h1{font-size:26px;margin:0 0 8px}.muted{color:#666;line-height:1.55}label{display:block;font-weight:700;margin:18px 0 7px}input,button{font:inherit}input[type=file],input[type=url]{width:100%;box-sizing:border-box;padding:10px;border:1px solid #bbb;border-radius:7px}button{background:#b30e1b;border:0;color:white;padding:12px 18px;border-radius:7px;font-weight:700;cursor:pointer}button:disabled{opacity:.5;cursor:wait}.bar{height:12px;background:#eee;border-radius:8px;overflow:hidden;margin-top:14px}.bar i{display:block;height:100%;width:0;background:#b30e1b;transition:width .2s}pre{white-space:pre-wrap;max-height:260px;overflow:auto;background:#171717;color:#e5e5e5;padding:12px;border-radius:8px;font-size:12px}.hint{background:#fff8e1;border-left:4px solid #e8a500;padding:12px;line-height:1.5}.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<div class="card"><h1>Tải ảnh bài báo Dân Trí</h1><p class="muted">Công cụ này chạy trong trình duyệt. Chọn các file từ thư mục <b>outputs</b>. Nó tìm ảnh đại diện của các bài chưa có ảnh cục bộ, tải ảnh và tạo ZIP gồm ảnh cùng dữ liệu đã cập nhật.</p><div class="hint"><b>Lưu ý:</b> do trình duyệt chặn đọc dữ liệu giữa các website, công cụ dùng proxy CORS công cộng. Proxy có thể giới hạn tốc độ hoặc từ chối Dân Trí; chỉ URL bài báo công khai được gửi tới proxy.</div>
+<label>1. dantri-articles.json</label><input id="articles" type="file" accept="application/json,.json">
+<label>2. dantri-menu.json</label><input id="menu" type="file" accept="application/json,.json">
+<label>3. dantri-seed.js</label><input id="seed" type="file" accept=".js,text/javascript">
+<label>Proxy lấy trang bài viết</label><input id="htmlProxy" type="url" value="https://proxy.cors.dev/"><label>Proxy tải ảnh</label><input id="imageProxy" type="url" value="https://images.weserv.nl/?url=">
+<div class="row" style="margin-top:18px"><button id="start">Tải ảnh và tạo ZIP</button><span id="status" class="muted">Chưa bắt đầu</span></div><div class="bar"><i id="progress"></i></div><pre id="log">Chờ chọn đủ 3 file.</pre></div>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+<script>
+const $=s=>document.querySelector(s), logBox=$('#log'), statusBox=$('#status'), bar=$('#progress');
+function log(s){logBox.textContent+=`\n${s}`;logBox.scrollTop=logBox.scrollHeight}
+function fileText(input){const f=input.files?.[0];if(!f)throw Error('Hãy chọn đủ 3 file dữ liệu.');return f.text()}
+function getMeta(doc,key){const el=doc.querySelector(`meta[property="${key}"],meta[name="${key}"]`);return el?.content?.trim()||''}
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+async function fetchProxy(url,proxy){const target=proxy.endsWith('/')?proxy+url:proxy+encodeURIComponent(url);const response=await fetch(target,{cache:'no-store',credentials:'omit'});if(!response.ok)throw Error('proxy HTTP '+response.status);return response;}
+async function retry(fn){let last;for(let i=0;i<3;i++){try{return await fn()}catch(e){last=e;await sleep(700*(i+1))}}throw last}
+function getSeedObject(seedText){const m=seedText.match(/window\.DANTRI_SEED\s*=\s*(\{[\s\S]*?\});/);if(!m)throw Error('Không tìm thấy dữ liệu window.DANTRI_SEED trong file JS.');return JSON.parse(m[1])}
+async function run(){const btn=$('#start');btn.disabled=true;logBox.textContent='';let successes=0,failed=0;try{if(!window.JSZip)throw Error('Không tải được thư viện ZIP. Hãy kiểm tra kết nối rồi mở lại trang này.');const [articlesText,menuText,seedText]=await Promise.all([fileText($('#articles')),fileText($('#menu')),fileText($('#seed'))]);const articles=JSON.parse(articlesText),menu=JSON.parse(menuText),seed=getSeedObject(seedText);const posts=Array.isArray(articles)?articles:articles.posts;if(!Array.isArray(posts))throw Error('Cấu trúc dantri-articles.json không có mảng posts.');const proxy=$('#proxy').value.trim();if(!proxy)throw Error('Hãy nhập địa chỉ proxy.');const targets=posts.filter(p=>!(p.image&&p.image.startsWith('assets/')));let done=0;const zip=new JSZip(),assets=zip.folder('assets');log(`Có ${targets.length} bài chưa trỏ tới ảnh cục bộ.`);
+let cursor=0;async function worker(){while(cursor<targets.length){const post=targets[cursor++];try{const html=await retry(async()=>await(await fetchProxy(post.url,htmlProxy)).text());const doc=new DOMParser().parseFromString(html,'text/html');let image=getMeta(doc,'og:image')||getMeta(doc,'twitter:image');if(!image){throw Error('không tìm thấy ảnh đại diện')}image=new URL(image,post.url).href;const response=await retry(()=>fetchProxy(image,imageProxy));const blob=await response.blob();if(blob.size<3000)throw Error('file ảnh quá nhỏ');const type=(blob.type.split('/')[1]||new URL(image).pathname.split('.').pop()||'jpg').toLowerCase().replace('jpeg','jpg').replace(/[^a-z0-9]/g,'');const ext=['jpg','png','webp','gif'].includes(type)?type:'jpg';const filename=(post.id||'dantri-'+done).replace(/[^a-zA-Z0-9_-]/g,'')+'.'+ext;assets.file(filename,blob);post.image='assets/'+filename;post.imageSource=image;successes++;}catch(e){failed++;log(`${post.id||post.url}: ${e.message}`)}done++;bar.style.width=Math.round(done/targets.length*100)+'%';statusBox.textContent=`Đang xử lý ${done}/${targets.length} · tải được ${successes}`;await sleep(250)}}
+await Promise.all([worker(),worker()]);seed.menu=menu.menu;seed.posts=posts;zip.file('dantri-articles.json',JSON.stringify(articles,null,2));zip.file('dantri-menu.json',JSON.stringify(menu,null,2));let updatedSeed=seedText.replace(/window\.DANTRI_MENU\s*=\s*\[[\s\S]*?\];/,'window.DANTRI_MENU = '+JSON.stringify(menu.menu)+';').replace(/window\.DANTRI_SEED\s*=\s*\{[\s\S]*?\};/,'window.DANTRI_SEED = '+JSON.stringify(seed)+';');zip.file('dantri-seed.js',updatedSeed);statusBox.textContent=`Hoàn tất: ${successes} ảnh tải được, ${failed} bài lỗi.`;log(`\nXong. Đã gom ${successes} ảnh vào ZIP. Các dòng lỗi phía trên cần thử lại hoặc bổ sung thủ công.`);const blob=await zip.generateAsync({type:'blob',compression:'DEFLATE',compressionOptions:{level:5}});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='dantri-images-and-updated-data.zip';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),60000);}catch(e){statusBox.textContent='Không thể hoàn tất';log('Lỗi: '+e.message)}finally{btn.disabled=false}}
+$('#start').addEventListener('click',run);
+</script>
+</body>
+</html>
+
+

@@ -48,3 +48,42 @@ body{font-family:Arial,Helvetica,sans-serif;background:#fff;color:#222}
 .nav-categories .nav-submenu a:hover,.nav-categories .nav-submenu a:focus-visible{background:#fff4f4;color:#b5121b;padding-left:20px}
 .nav-categories .nav-submenu a::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:3px;background:#b5121b;transform:scaleY(0);transition:transform .18s ease}
 .nav-categories .nav-submenu a:hover::before,.nav-categories .nav-submenu a:focus-visible::before{transform:scaleY(1)}
+/* Expanded category directory, modeled after Dân Trí's mega menu */
+.header-inner{position:relative}
+.nav-categories.mega-open .nav-item .nav-submenu{display:none}
+.all-category-toggle{align-self:center;flex:0 0 40px;height:40px;margin-left:8px;border:0;background:transparent;color:#222;font-size:26px;line-height:1;cursor:pointer}
+.all-category-toggle:hover{color:#b5121b}
+.mega-menu{position:absolute;top:100%;left:0;right:0;z-index:40;max-height:calc(100vh - 150px);overflow:auto;background:#f7f7f7;border:1px solid #e0e0e0;box-shadow:0 12px 25px #0002}
+.mega-menu[hidden]{display:none}
+.mega-layout{max-width:1400px;margin:auto;display:grid;grid-template-columns:minmax(0,1fr) 300px;min-height:440px}
+.mega-categories{padding:28px 26px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));align-content:start;gap:30px 24px}
+.mega-group h2{margin:0 0 12px;font-size:15px;line-height:1.3;text-transform:uppercase;font-weight:650;color:#173149}
+.mega-group h2 a:hover,.mega-child:hover{color:#b5121b}
+.mega-child{display:block;padding:6px 0;font-size:14px;line-height:1.35;color:#273c50}
+.mega-aside{border-left:1px solid #d1d1d1;padding:26px 24px;display:flex;flex-direction:column;gap:24px}
+.mega-aside-links{display:grid;grid-template-columns:1fr 1fr;gap:11px 18px}
+.mega-aside-links a,.mega-contact{font-size:14px;color:#183149}
+.mega-aside-links a{font-weight:650}.mega-aside-links a:hover{color:#b5121b}
+.mega-contact{border-top:1px solid #d5d5d5;padding-top:18px;display:grid;gap:10px}
+.mega-social{display:flex;gap:9px}.mega-social a{width:31px;height:31px;display:grid;place-items:center;border-radius:50%;background:#1877f2;color:#fff;font-weight:800}.mega-social a:nth-child(2){background:#e90000}.mega-social a:nth-child(3){background:#111}
+@media(max-width:1100px){.mega-layout{grid-template-columns:minmax(0,1fr) 240px}.mega-categories{grid-template-columns:repeat(4,minmax(0,1fr));gap:25px 18px;padding:24px 20px}}
+@media(max-width:680px){.all-category-toggle{height:36px;margin-left:auto}.mega-menu{position:fixed;top:112px;left:0;right:0;max-height:calc(100vh - 112px)}.mega-layout{display:block}.mega-categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px;padding:20px 16px}.mega-aside{border-left:0;border-top:1px solid #ddd;padding:20px 16px}.mega-group h2{font-size:13px}.mega-child{font-size:13px}}
+/* Compact initial navigation matching the reference strip */
+.header-inner{padding:0;gap:0}
+.header-inner>.brand,.header-inner>.crawler-link{display:none!important}
+.nav-categories{height:48px;min-height:48px;padding:0 7px;border-top:0;justify-content:space-between;gap:0;flex-wrap:nowrap}
+.nav-categories .nav-item{height:48px}
+.nav-categories .nav-item-head{height:48px;align-items:stretch}
+.nav-categories .nav-item .nav-main{height:48px;padding:0 7px;text-transform:uppercase;font-size:14px;font-weight:500;color:#152839}
+.nav-categories .nav-item .nav-main:hover,.nav-categories .nav-item .nav-main.active{color:#b5121b}
+.nav-categories .submenu-toggle{display:none}
+.all-category-toggle{height:42px;flex-basis:38px;margin:0 3px 0 5px;padding:0;display:grid;place-items:center}
+.dot-grid{display:grid;grid-template-columns:repeat(3,4px);grid-template-rows:repeat(3,4px);gap:3px}
+.dot-grid i{display:block;width:4px;height:4px;border-radius:50%;background:currentColor}
+@media(max-width:1200px){.nav-categories{justify-content:flex-start;overflow-x:auto;overflow-y:visible}.nav-categories .nav-item{flex:0 0 auto}}
+@media(max-width:680px){.header-inner{padding:0 14px}.header-inner>.brand{display:flex!important;margin:10px 0}.header-inner>.crawler-link{display:block!important;margin:10px 0 10px 8px}.nav-categories{height:auto;min-height:0}.nav-categories.open{display:flex}.all-category-toggle{flex:0 0 34px}}
+/* Restore the site identity and crawler action above the compact category strip */
+.header-inner>.brand{display:flex!important;margin:9px 12px 9px 18px}
+.header-inner>.crawler-link{display:block!important;margin:9px 18px 9px auto}
+.nav-categories{border-top:1px solid #eee}
+@media(max-width:680px){.header-inner>.brand{margin:10px 0}.header-inner>.crawler-link{margin:10px 0 10px 8px}}

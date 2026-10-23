@@ -1,6 +1,6 @@
 {
   "source": "https://dantri.com.vn/",
-  "collectedAt": "2026-10-22",
+  "collectedAt": "2026-10-23",
   "menu": [
     {
       "id": "home",
@@ -40,6 +40,11 @@
           "id": "esg-viet-nam",
           "title": "ESG Việt Nam",
           "url": "https://dantri.com.vn/kinh-doanh/esg-viet-nam.htm"
+        },
+        {
+          "id": "doanh-nghiep",
+          "title": "Doanh nghiệp",
+          "url": "https://dantri.com.vn/kinh-doanh/doanh-nghiep.htm"
         }
       ]
     },
@@ -348,7 +353,7 @@
         {
           "id": "tra-cuu-diem",
           "title": "Tra cứu điểm",
-          "url": "https://dantri.com.vn/giao-duc/tra-cuu-diem.htm"
+          "url": "https://dantri.com.vn/giao-duc/tuyen-sinh/tra-cuu-diem.htm"
         }
       ]
     },
@@ -389,7 +394,7 @@
         {
           "id": "an-sinh",
           "title": "An sinh",
-          "url": "https://dantri.com.vn/lao-dong-viec-lam/an-sinh.htm"
+          "url": "https://dantri.com.vn/lao-dong-viec-lam/chinh-sach.htm"
         }
       ]
     },

@@ -1,8 +1,3 @@
-/**
- * Chuẩn hóa một trang bài viết Dân Trí trong trình duyệt.
- * Dùng trong console/bookmarklet tại dantri.com.vn để cùng origin fetch không bị CORS.
- * Trả về object theo schema yêu cầu; giữ nguyên văn bản bài, không tự viết lại.
- */
 async function getDanTriArticle(articleUrl) {
   const url = new URL(articleUrl, location.href).href;
   const response = await fetch(url, { credentials: "include" });
@@ -40,13 +35,6 @@ async function getDanTriArticle(articleUrl) {
   };
 }
 
-// Ví dụ:
-// const article = await getDanTriArticle("https://dantri.com.vn/...htm");
-// console.log(JSON.stringify(article, null, 2));
-
-/** Thu thập tối đa 10 bài từ mỗi mục trong menu; chạy tại dantri.com.vn.
- * Trả về { menu, postsByCategory }; bỏ qua các bài không đọc được và ghi lỗi riêng.
- */
 async function collectDanTriMenu(menu, perCategory = 10) {
   const entries = menu.flatMap((item) => [item, ...(item.children || [])])
     .filter((item) => item.type !== "home" && item.type !== "external");
@@ -76,7 +64,4 @@ async function collectDanTriMenu(menu, perCategory = 10) {
   return result;
 }
 
-// Ví dụ lưu JSON (mở devtools tại dantri.com.vn):
-// const data = await collectDanTriMenu(menuData.menu, 10);
-// copy(JSON.stringify(data, null, 2));
 
